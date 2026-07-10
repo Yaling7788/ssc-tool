@@ -12,7 +12,7 @@ with a **fully offline demo mode** so you can explore every feature without a ke
 
 <br />
 
-**🔗 Live:** [ssc-tool.bodilabs.io](https://ssc-tool.bodilabs.io) &nbsp;·&nbsp; **▶ Launch:** [`app.html`](https://ssc-tool.bodilabs.io/app.html)
+**🔗 Live:** [ssc-tool.yalinglu.com](https://ssc-tool.yalinglu.com) &nbsp;·&nbsp; **▶ Launch:** [`app.html`](https://ssc-tool.yalinglu.com/app.html)
 
 [![Version](https://img.shields.io/badge/version-6.0-35e0c4?style=for-the-badge)](#)
 [![Single File](https://img.shields.io/badge/single--file-no%20build-38bdf8?style=for-the-badge)](#)
