@@ -1,0 +1,29 @@
+# Supply Chain CYBER Exposure Discovery (SSC ASI Tool)
+
+> A free, open-source (MIT), single-file web dashboard for querying, visualizing, and exporting supply-chain cyber-exposure data from SecurityScorecard's Attack Surface Intelligence (ASI) API — with a fully offline demo mode that needs no API key.
+
+Supply Chain CYBER Exposure Discovery is a client-side security tool that runs entirely in the browser from one HTML file (no server, no build step, no install). Security analysts use it to compose ASI queries with boolean logic and one-click threat-signal toggles, then view results as a sortable findings table, eleven ranked charts (threat actors, CVEs, products, ports, ASN, ISP, countries, states, cities, attributed domains, MITRE techniques), and an interactive geographic threat map, and export everything to CSV or JSON. When no API key is configured it runs a deterministic demo dataset of 1,500 fictional findings, so every feature works offline.
+
+## Links
+
+- [Live site](https://ssc-tool.yalinglu.com/): landing and help page
+- [Launch the dashboard](https://ssc-tool.yalinglu.com/app): the tool itself
+- [Source code on GitHub (MIT)](https://github.com/Yaling7788/ssc-tool): full source, README, and license
+
+## Key facts
+
+- Category: cybersecurity / attack-surface intelligence / supply-chain (third-party) risk
+- License: MIT (open source, free to use and self-host)
+- Architecture: single self-contained HTML file, client-side only, no backend or database
+- Tech stack: vanilla JavaScript, jQuery, DataTables, Plotly.js, Leaflet, SlimSelect, PapaParse (all via CDN with Subresource Integrity)
+- Data source: SecurityScorecard Attack Surface Intelligence (ASI) API — optional, user supplies their own API key (stored only in the browser)
+- Demo mode: 1,500 deterministic, fictional findings; works fully offline with no key
+- Security: strict Content-Security-Policy, SRI-pinned dependencies, HTML-escaped rendering, CSV-injection-safe exports
+- Author: Yaling Lu
+
+## Common questions
+
+- What is it? A single-file, browser-based dashboard for exploring supply-chain cyber exposure and attack-surface intelligence.
+- Do I need an account or API key? No — it opens in an offline demo mode. A SecurityScorecard API key is optional for live data.
+- Is it free / open source? Yes, MIT-licensed.
+- How is it hosted? Static files on Cloudflare Pages; the whole app is one HTML file you can also open locally.

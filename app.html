@@ -3577,7 +3577,14 @@ function addLongPressListener(element, duration, callback) {
 
 
 
+  // Fire a GA4 event when analytics is available (no-op offline / with blockers).
+  // Never sends query content or API data — only coarse, privacy-safe signals.
+  function trackEvent(name, params) {
+    try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {}
+  }
+
   function launchClick(){
+    trackEvent('search', { mode: (typeof DemoEngine !== 'undefined' && DemoEngine.isDemoActive()) ? 'demo' : 'live' });
     asiQueryStr = document.getElementById("asiQuery").value
       // Create and dispatch input event to triger auto increase of the textarea
       var textArea = document.querySelector('#asiQuery');
@@ -4501,6 +4508,7 @@ function applyReindexOption() {
 var domainsQuerried =[]
 
   function downloadJSON (){
+  trackEvent('export', { format: 'json' });
   jsonData=results_hits
   const blob = new Blob([JSON.stringify(jsonData)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -4540,6 +4548,7 @@ function csvNeutralizeRows(rows) {
 }
 
 function downloadCSV() {
+  trackEvent('export', { format: 'csv' });
   // Get all the results
   var results = results_hits;
 
@@ -4564,6 +4573,7 @@ function downloadCSV() {
 
 
 async function downloadCSV_all() {
+  trackEvent('export', { format: 'csv_all' });
   let csv = await prepareData();
   var link = document.createElement('a');
   link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv));
