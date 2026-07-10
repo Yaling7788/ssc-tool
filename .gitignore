@@ -1,0 +1,14 @@
+# OS / editor cruft
+.DS_Store
+**/.DS_Store
+Thumbs.db
+*~
+.vscode/
+.idea/
+
+# Never commit secrets
+*.key
+*.pem
+.env
+.env.*
+token.txt
