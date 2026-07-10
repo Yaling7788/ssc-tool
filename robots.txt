@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ssc-tool.yalinglu.com/sitemap.xml
