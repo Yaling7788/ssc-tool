@@ -138,6 +138,10 @@
   .nav-links { margin-left: auto; display: flex; align-items: center; gap: 26px; }
   .nav-links a { color: var(--text-2); font-size: 14px; font-weight: 500; transition: color .15s; }
   .nav-links a:hover { color: var(--text-1); }
+  /* Keep the Launch App button's dark ink readable — the generic .nav-links a
+     color (muted gray) otherwise washes it out on the bright gradient. */
+  .nav-links a.btn-primary,
+  .nav-links a.btn-primary:hover { color: var(--accent-ink); font-weight: 700; }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: var(--font-body); font-weight: 600; font-size: 14px;
